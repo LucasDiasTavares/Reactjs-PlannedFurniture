@@ -1,4 +1,4 @@
-# ReactJS with ChartJS
+# Planned Furniture
 Este é um pequeno projeto, onde consiste básicamente uma homepage e uma página secundaria onde o usuario pode utilizar alguns filtros, para ter ver exatamente oque ele quer se existir o item.
 <br />
 Veja online no seu navegador [Lucas Tavares Planned Furniture]()
