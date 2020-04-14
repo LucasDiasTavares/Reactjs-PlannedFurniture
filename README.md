@@ -5,11 +5,13 @@ Veja online no seu navegador [Lucas Tavares Planned Furniture]()
 
 Imagens:
 - [pixabay](https://pixabay.com/pt/photos/sala-de-estar-apartamento-sala-3539586/)
+- [flat-icon](https://www.flaticon.com/)
 
 Packages:
 
 - [React Icons](https://www.npmjs.com/package/react-icons)
 - [React Router Dom](https://www.npmjs.com/package/react-router-dom)
+Além destes packages estou utiliando [Context-Api](https://pt-br.reactjs.org/docs/context.html)
 
 <br />
 
