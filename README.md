@@ -1,7 +1,10 @@
 # Planned Furniture
-Este é um pequeno projeto, onde consiste básicamente uma homepage e uma página secundaria onde o usuario pode utilizar alguns filtros, para ter ver exatamente oque ele quer se existir o item.
+Este é um pequeno projeto, onde consiste básicamente uma homepage e uma página secundaria onde o usuario pode utilizar alguns filtros, para ver exatamente oque ele quer se existir o item.
 <br />
 Veja online no seu navegador [Lucas Tavares Planned Furniture]()
+
+Imagens:
+- [pixabay](https://pixabay.com/pt/photos/sala-de-estar-apartamento-sala-3539586/)
 
 Packages:
 

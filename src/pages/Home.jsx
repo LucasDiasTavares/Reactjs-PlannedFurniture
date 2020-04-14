@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import { Link } from 'react-router-dom';
 import HeroSection from '../components/Header/Hero';
 import Banner from '../components/Banner/Banner';
-import { Link } from 'react-router-dom';
+import Services from '../components/Services/Services';
 
 
 export default function Home() {
     return (
-        <div>
+        <Fragment>
             <HeroSection>
                 <Banner
                     title='luxurious furniture'
@@ -16,6 +17,7 @@ export default function Home() {
                     </Link>
                 </Banner>
             </HeroSection>
-        </div>
+            <Services />
+        </Fragment>
     )
 }
