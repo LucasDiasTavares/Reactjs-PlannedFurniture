@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react';
+import HeroSection from '../components/Header/Hero';
+
 
 export const PlannedFurniture = () => {
     return (
-        <div>
-            Hello from PlannedFurniture page
-        </div>
+        <HeroSection hero='furnitureHero' />
     )
 }
 

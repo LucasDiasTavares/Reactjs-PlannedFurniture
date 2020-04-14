@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
-import './style.css'
+import React, { Component } from 'react';
+import './style.css';
 import { FaBars } from "react-icons/fa";
 import { Link } from 'react-router-dom';
-import logo from '../images/logo.svg';
+import logo from '../../images/logo.svg';
 
 
 export default class Navbar extends Component {

@@ -7,7 +7,7 @@ import PlannedFurniture from './pages/PlannedFurniture';
 import SingleFurniture from './pages/SingleFurniture';
 import Error from './pages/Error';
 
-import Navbar from './components/Navbar';
+import Navbar from './components/Navbar/Navbar';
 
 function App() {
   return (

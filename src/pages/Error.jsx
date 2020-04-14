@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
+import HeroSection from '../components/Header/Hero';
+
 
 export default function Error() {
     return (
-        <div>
-            Hello from Error page
-        </div>
+        <HeroSection />
     )
 }

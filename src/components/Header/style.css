@@ -1,0 +1,13 @@
+.defaultHero,
+.furnitureHero {
+    min-height: calc(100vh - 66px);
+    background: url("../../images/defaultBcg.jpeg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.furnitureHero {
+    background-image: url("../../images/item-2.jpeg");
+    min-height: 60vh;
+}
