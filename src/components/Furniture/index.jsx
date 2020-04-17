@@ -7,8 +7,6 @@ import PropTypes from 'prop-types'
 
 export default function index({ furniture }) {
     const { name, slug, images, price } = furniture;
-    console.log(furniture);
-
 
     return (
         <article className='furniture'>

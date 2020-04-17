@@ -6,8 +6,10 @@ import Home from './pages/Home';
 import PlannedFurniture from './pages/PlannedFurniture';
 import SingleFurniture from './pages/SingleFurniture';
 import Error from './pages/Error';
-
 import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
+
+
 
 function App() {
   return (
@@ -19,6 +21,7 @@ function App() {
         <Route exact path="/furniture/:slug" component={SingleFurniture} />
         <Route component={Error} />
       </Switch>
+      <Footer />
     </>
   );
 }

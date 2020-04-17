@@ -36,9 +36,18 @@ export default class FurnitureProvider extends Component {
         return tempItems
     }
 
+    getFurniture = (slug) => {
+        let tempFurnitures = [...this.state.furnitures];
+        const furniture = tempFurnitures.find(furniture => furniture.slug === slug)
+        return furniture
+    }
+
     render() {
         return (
-            <FurnitureContext.Provider value={{ ...this.state }}>
+            <FurnitureContext.Provider value={{
+                ...this.state,
+                getFurniture: this.getFurniture
+            }}>
                 {this.props.children}
             </FurnitureContext.Provider>
         )
