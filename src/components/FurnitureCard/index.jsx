@@ -11,7 +11,10 @@ export default function index({ furniture }) {
     return (
         <article className='furniture'>
             <div className="img-container">
-                <img src={images[0] || defaultImg} alt={name} />
+                <Link to={`/furniture/${slug}`}>
+                    <img src={images[0] || defaultImg} alt={name} />
+
+                </Link>
                 <div className="price-top">
                     <h6>${price}</h6>
                     <p>in cash</p>

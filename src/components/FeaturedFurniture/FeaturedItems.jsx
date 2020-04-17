@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { FurnitureContext } from '../../Contex';
-import Furniture from '../Furniture';
+import Furniture from '../FurnitureCard';
 import Loading from '../Loading';
 import Title from '../Services/Title';
 import './style.css';

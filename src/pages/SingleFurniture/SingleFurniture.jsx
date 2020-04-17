@@ -23,6 +23,7 @@ export default class SingleFurniture extends Component {
     render() {
         const { getFurniture } = this.context;
         const furniture = getFurniture(this.state.slug);
+
         if (!furniture) {
             return <div className="error">
                 <h3>No such furtniture could be found</h3>
@@ -30,7 +31,8 @@ export default class SingleFurniture extends Component {
             </div>
         }
 
-        const { name, description, capacity, size, price, extras, images, mirror } = furniture
+        const { name, description, capacity, heigth, width, price, extras, images, mirror } = furniture
+
         const [mainImg, ...otherImgs] = images;
         return (
             <>
@@ -53,8 +55,8 @@ export default class SingleFurniture extends Component {
                         <article className="info">
                             <h3>info</h3>
                             <h6>price: ${price}</h6>
-                            <h6>Height: {size} </h6>
-                            <h6>Width: {size} </h6>
+                            <h6>Height: {heigth} </h6>
+                            <h6>Width: {width} </h6>
                             <h6>
                                 max capacity: {
                                     capacity > 1 ? `${capacity} people` : `${capacity} person`
