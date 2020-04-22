@@ -15,7 +15,7 @@ export default function FurnitureFilter({ furnitures }) {
     const {
         handleChange,
         type,
-        capacity,
+        drawer,
         price,
         minPrice,
         maxPrice,
@@ -27,6 +27,7 @@ export default function FurnitureFilter({ furnitures }) {
 
     let types = uniqueValues(furnitures, 'type');
     types = ['all', ...types];
+    let drawers = uniqueValues(furnitures, 'drawer');
 
     return (
         <section className="filter-container">
@@ -44,6 +45,75 @@ export default function FurnitureFilter({ furnitures }) {
                         })}
                     </select>
                 </div>
+
+                <div className="form-group">
+                    <label htmlFor="drawer">Drawers</label>
+                    <select name="drawer"
+                        id="drawer"
+                        value={drawer}
+                        className="form-control"
+                        onChange={handleChange}>
+                        {drawers = drawers.map((item, index) => {
+                            return <option value={item} key={index}>{item}</option>
+                        })}
+                    </select>
+                </div>
+
+                <div className="form-group">
+                    <label htmlFor="price">Price ${price}</label>
+                    <input name="price"
+                        id="price"
+                        type="range"
+                        min={minPrice}
+                        max={maxPrice}
+                        value={price}
+                        onChange={handleChange}
+                        className="form-control" />
+                </div>
+
+                <div className="form-group">
+                    <label htmlFor="minHeigth">Heigth in cm</label>
+                    <div className="size-inputs">
+                        <input type="number"
+                            name="minHeight"
+                            value={minHeight}
+                            onChange={handleChange}
+                            className="size-input" />
+                        <input type="number"
+                            name="maxHeight"
+                            value={maxHeight}
+                            onChange={handleChange}
+                            className="size-input" />
+                    </div>
+                </div>
+
+                <div className="form-group">
+                    <label htmlFor="minWidth">Width in cm</label>
+                    <div className="size-inputs">
+                        <input type="number"
+                            name="minWidth"
+                            value={minWidth}
+                            onChange={handleChange}
+                            className="size-input" />
+                        <input type="number"
+                            name="maxWidth"
+                            value={maxWidth}
+                            onChange={handleChange}
+                            className="size-input" />
+                    </div>
+                </div>
+
+                <div className="form-group">
+                    <div className="single-extra">
+                        <input type="checkbox"
+                            name="mirror"
+                            id="mirror"
+                            checked={mirror}
+                            onChange={handleChange} />
+                        <label htmlFor="mirror">Mirror</label>
+                    </div>
+                </div>
+
             </form>
         </section>
     )

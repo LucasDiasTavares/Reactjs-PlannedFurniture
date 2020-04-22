@@ -13,7 +13,7 @@ export default class FurnitureProvider extends Component {
         loading: true,
         //filters
         type: 'all',
-        capacity: 1,
+        drawer: 1,
         price: 0,
         minPrice: 0,
         maxPrice: 0,
@@ -63,7 +63,7 @@ export default class FurnitureProvider extends Component {
 
     handleChange = event => {
         const target = event.target
-        const value = event.type === 'checkbox' ? target.checked : target.value
+        const value = target.type === "checkbox" ? target.checked : target.value
         const name = event.target.name
         this.setState({
             [name]: value
@@ -74,7 +74,7 @@ export default class FurnitureProvider extends Component {
         let {
             furnitures,
             type,
-            capacity,
+            drawer,
             price,
             minHeight,
             maxHeight,
@@ -84,9 +84,28 @@ export default class FurnitureProvider extends Component {
         } = this.state
 
         let tempFurnitures = [...furnitures];
+        drawer = parseInt(drawer)
         if (type !== 'all') {
             tempFurnitures = tempFurnitures.filter(furniture => furniture.type === type)
         }
+        //filter by mirror
+        if (mirror) {
+            tempFurnitures = tempFurnitures.filter(furniture => furniture.mirror === true);
+        }
+        //filter by drawer
+        if (drawer !== 0) {
+            tempFurnitures = tempFurnitures.filter(furniture => furniture.drawer >= drawer)
+        }
+        //filter by price
+        price = parseInt(price)
+        tempFurnitures = tempFurnitures.filter(furniture => furniture.price <= price);
+        //filter by heigth
+        tempFurnitures = tempFurnitures.filter(furniture =>
+            furniture.heigth >= minHeight && furniture.heigth <= maxHeight);
+        //filter by width
+        tempFurnitures = tempFurnitures.filter(furniture =>
+            furniture.width >= minWidth && furniture.width <= maxWidth);
+
         this.setState({
             sortedFurnitures: tempFurnitures
         })
