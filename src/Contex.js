@@ -1,6 +1,7 @@
 import React, { Component, createContext } from 'react'
 import Client from './Contentful'
 
+console.log("Muito bonito procurando por erros no console hein @_@");
 
 const FurnitureContext = createContext();
 

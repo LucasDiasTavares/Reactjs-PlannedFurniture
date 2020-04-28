@@ -14,7 +14,7 @@ export default function Home() {
                     title='luxurious wardrobes'
                     subtitle='deluxe wardrobe starting at $ 180,00'>
                     <Link to='/furniture' className='btn-primary'>
-                        our furnitures
+                        our wardrobes
                     </Link>
                 </Banner>
             </HeroSection>

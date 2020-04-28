@@ -2,14 +2,8 @@
 Este é um pequeno projeto, onde consiste básicamente uma homepage e uma página secundaria onde o usuario pode utilizar alguns filtros, para ver exatamente oque ele quer, se existir o item.
 
 - Veja online no seu navegador [Lucas Tavares Planned Furniture]()
-- Caso queira testar na sua máquina uma versão de testes utilize o commit (d411fa5ade7b2013409053aa2e6f0051c0bd241a) além disto na pasta de src crie uma nova pasta com o nome de imagens e importe manualmente elas para o arquivo data.js, dentro dessa pasta de imagens criar outra com o nome de gif e adicionar um gif de loading com o nome de `loading-arrow.gif`
+- Caso queira testar na sua máquina uma versão de testes utilize o commit (d411fa5ade7b2013409053aa2e6f0051c0bd241a) importante ter uma imagem com o nome de defaultBcg para ser a default e uma com o nome de logo.svg dentro da pasta /images/ todas as outras imagens devem ser adicionadas manualmente para rodar localmente sem a utilização do back-end pela contentful.
 
-```javascript
-import furniture3 from "./images/nomeDaImagem.extensão";
-import furniture4 from "./images/nomeDaImagem.extensão";
-import img1 from "./images/nomeDaImagem.extensão";
-//e va indo até chegar na img8 também é importante ter uma imagem com o nome de defaultBcg para ser a default
-```
 
 Imagens:
 - [pixabay](https://pixabay.com/pt)

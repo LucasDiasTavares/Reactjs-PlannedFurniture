@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import defaultBcg from '../../images/defaultBcg.jpg'
 import Banner from '../../components/Banner/Banner'
-import Title from '../../components/Services/Title'
 import { Link } from 'react-router-dom'
 import { FurnitureContext } from '../../Contex'
 import StyledHero from '../../components/Header/StyledHero'
@@ -32,7 +31,7 @@ export default class SingleFurniture extends Component {
             </div>
         }
 
-        const { name, description, heigth, width, price, extras, images, mirror } = furniture
+        const { name, description, height, width, price, extras, images, mirror } = furniture
 
         const [mainImg, ...otherImgs] = images;
         return (
@@ -44,10 +43,9 @@ export default class SingleFurniture extends Component {
                 </StyledHero>
 
                 <section className='single-furniture'>
-                    <Title title="Outras imagens" />
                     <div className="single-furniture-images">
                         {otherImgs.map((item, index) => {
-                            return <img key={index} src={item} alt={name} />
+                            return <img className="max-heigth-single" key={index} src={item} alt={name} />
                         })}
                     </div>
                     <div className="single-furniture-info">
@@ -58,7 +56,7 @@ export default class SingleFurniture extends Component {
                         <article className="info">
                             <h3>info</h3>
                             <h6>price: ${price}</h6>
-                            <h6>Height: {heigth} </h6>
+                            <h6>Height: {height} </h6>
                             <h6>Width: {width} </h6>
                             <h6>
                                 {mirror ? "contains mirror" : "not contains mirror"}

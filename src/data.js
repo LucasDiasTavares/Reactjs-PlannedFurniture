@@ -1,13 +1,13 @@
-import furniture3 from "./images/details-3.jpeg";
-import furniture4 from "./images/details-4.jpeg";
-import img1 from "./images/brown-single.png";
-import img2 from "./images/white-couple.png";
-import img3 from "./images/beige-wardrobe.png";
-import img4 from "./images/wardrobe-couple.png";
-import img5 from "./images/biggest-wardrobe.png";
-import img6 from "./images/single-wardrobe.png";
-import img7 from "./images/corner-wardrobe.png";
-import img8 from "./images/white-corner-couple.png";
+import furniture3 from "./images/nomeDaImagem.extensão";
+import furniture4 from "./images/nomeDaImagem.extensão";
+import img1 from "./images/nomeDaImagem.extensão";
+import img2 from "./images/nomeDaImagem.extensão";
+import img3 from "./images/nomeDaImagem.extensão";
+import img4 from "./images/nomeDaImagem.extensão";
+import img5 from "./images/nomeDaImagem.extensão";
+import img6 from "./images/nomeDaImagem.extensão";
+import img7 from "./images/nomeDaImagem.extensão";
+import img8 from "./images/nomeDaImagem.extensão";
 
 
 export default [
