@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import defaultBcg from '../../images/defaultBcg.jpg'
 import Banner from '../../components/Banner/Banner'
+import Title from '../../components/Services/Title'
 import { Link } from 'react-router-dom'
 import { FurnitureContext } from '../../Contex'
 import StyledHero from '../../components/Header/StyledHero'
@@ -41,7 +42,9 @@ export default class SingleFurniture extends Component {
                         <Link className='btn-primary' to='/furniture'>back to wardrobes</Link>
                     </Banner>
                 </StyledHero>
+
                 <section className='single-furniture'>
+                    <Title title="Outras imagens" />
                     <div className="single-furniture-images">
                         {otherImgs.map((item, index) => {
                             return <img key={index} src={item} alt={name} />

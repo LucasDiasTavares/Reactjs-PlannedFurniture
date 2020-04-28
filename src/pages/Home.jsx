@@ -11,8 +11,8 @@ export default function Home() {
         <Fragment>
             <HeroSection>
                 <Banner
-                    title='luxurious furniture'
-                    subtitle='deluxe wardrobe starting at $ 199,00'>
+                    title='luxurious wardrobes'
+                    subtitle='deluxe wardrobe starting at $ 180,00'>
                     <Link to='/furniture' className='btn-primary'>
                         our furnitures
                     </Link>

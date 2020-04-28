@@ -1,5 +1,5 @@
 import React, { Component, createContext } from 'react'
-import items from './data'
+import Client from './Contentful'
 
 
 const FurnitureContext = createContext();
@@ -23,27 +23,41 @@ export default class FurnitureProvider extends Component {
         mirror: false,
     }
 
+    getData = async () => {
+        try {
+            let response = await Client.getEntries({
+                content_type: 'plannedfurniture',
+                order: 'fields.price'
+            })
+            let furnitures = this.formatData(response.items)
+
+            let featuredFurnitures = furnitures.filter(
+                furniture => furniture.featured === true);
+
+            let maxPrice = Math.max(...furnitures.map(item => item.price));
+            let minPrice = Math.min(...furnitures.map(item => item.price));
+            let maxHeight = Math.max(...furnitures.map(item => item.height));
+            let maxWidth = Math.max(...furnitures.map(item => item.width));
+
+            this.setState({
+                furnitures,
+                sortedFurnitures: furnitures,
+                featuredFurnitures,
+                loading: false,
+                price: maxPrice,
+                minPrice: minPrice,
+                maxPrice,
+                maxHeight,
+                maxWidth
+            });
+
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
     componentDidMount() {
-        let furnitures = this.formatData(items)
-        let featuredFurnitures = furnitures.filter(
-            furniture => furniture.featured === true);
-
-        let maxPrice = Math.max(...furnitures.map(item => item.price));
-        let minPrice = Math.min(...furnitures.map(item => item.price));
-        let maxHeight = Math.max(...furnitures.map(item => item.heigth));
-        let maxWidth = Math.max(...furnitures.map(item => item.width));
-
-        this.setState({
-            furnitures,
-            sortedFurnitures: furnitures,
-            featuredFurnitures,
-            loading: false,
-            price: maxPrice,
-            minPrice: minPrice,
-            maxPrice,
-            maxHeight,
-            maxWidth
-        });
+        this.getData()
     }
 
     formatData(items) {
@@ -96,7 +110,7 @@ export default class FurnitureProvider extends Component {
         tempFurnitures = tempFurnitures.filter(furniture => furniture.price <= price);
         //filter by heigth
         tempFurnitures = tempFurnitures.filter(furniture =>
-            furniture.heigth >= minHeight && furniture.heigth <= maxHeight);
+            furniture.height >= minHeight && furniture.height <= maxHeight);
         //filter by width
         tempFurnitures = tempFurnitures.filter(furniture =>
             furniture.width >= minWidth && furniture.width <= maxWidth);

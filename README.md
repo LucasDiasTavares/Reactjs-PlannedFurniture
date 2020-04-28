@@ -2,13 +2,13 @@
 Este é um pequeno projeto, onde consiste básicamente uma homepage e uma página secundaria onde o usuario pode utilizar alguns filtros, para ver exatamente oque ele quer, se existir o item.
 
 - Veja online no seu navegador [Lucas Tavares Planned Furniture]()
-- Caso queira testar na sua máquina uma versão de testes utilize o commit () além disto na pasta de src crie uma nova pasta com o nome de imagens e importe manualmente elas para o arquivo data.js, dentro dessa pasta de imagens criar outra com o nome de gif e adicionar um gif de loading com o nome de `loading-arrow.gif`
+- Caso queira testar na sua máquina uma versão de testes utilize o commit (d411fa5ade7b2013409053aa2e6f0051c0bd241a) além disto na pasta de src crie uma nova pasta com o nome de imagens e importe manualmente elas para o arquivo data.js, dentro dessa pasta de imagens criar outra com o nome de gif e adicionar um gif de loading com o nome de `loading-arrow.gif`
 
 ```javascript
 import furniture3 from "./images/nomeDaImagem.extensão";
 import furniture4 from "./images/nomeDaImagem.extensão";
 import img1 from "./images/nomeDaImagem.extensão";
-//e va indo até chegar na img8 também é importante ter uma imagem com o nome de defaultBcg para der a defualt
+//e va indo até chegar na img8 também é importante ter uma imagem com o nome de defaultBcg para ser a default
 ```
 
 Imagens:
@@ -19,7 +19,12 @@ Packages:
 
 - [React Icons](https://www.npmjs.com/package/react-icons)
 - [React Router Dom](https://www.npmjs.com/package/react-router-dom)
-Além destes packages estou utiliando [Context-Api](https://pt-br.reactjs.org/docs/context.html)
+- Além destes packages estou utiliando [Context-Api](https://pt-br.reactjs.org/docs/context.html)
+
+Back-end:
+- [Contentful](https://www.contentful.com/)
+- [Json example](https://www.contentful.com/developers/docs/concepts/data-model/)
+- [Ordenar os resultado](https://www.contentful.com/developers/docs/references/content-delivery-api/#/reference/search-parameters/order)
 
 <br />
 
@@ -107,6 +112,17 @@ Exemplo de código: como fazer destructuring de objeto e array?
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## In the project directory, you can run:
+
+### Create .env-development file
+
+Create a file .env-development on project root and add the params:
+
+```javascript
+REACT_APP_API_SPACE=YOUR_CONTENTFUL_API_SPACE
+REACT_APP_API_ACCESS_TOKEN=YOUR_CONTENTFUL_API_ACCESS_TOKEN
+```
+
+Or just ignore this step if you wanna install this project locally.
 
 ### `npm install`
 

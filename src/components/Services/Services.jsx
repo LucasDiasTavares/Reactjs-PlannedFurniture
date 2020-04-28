@@ -22,7 +22,7 @@ export default class Services extends Component {
             {
                 icon: <FaTruck />,
                 title: "We deliver",
-                info: "We deliver our product in any London states with free shipping"
+                info: "We deliver our product in any states with free shipping"
             },
             {
                 icon: <FaGlobe />,
