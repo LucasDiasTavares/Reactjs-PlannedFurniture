@@ -31,14 +31,14 @@ export default class SingleFurniture extends Component {
             </div>
         }
 
-        const { name, description, capacity, heigth, width, price, extras, images, mirror } = furniture
+        const { name, description, heigth, width, price, extras, images, mirror } = furniture
 
         const [mainImg, ...otherImgs] = images;
         return (
             <>
                 <StyledHero img={mainImg}>
-                    <Banner title={`${name} furniture`}>
-                        <Link className='btn-primary' to='/'>back to furnitures</Link>
+                    <Banner title={name}>
+                        <Link className='btn-primary' to='/furniture'>back to wardrobes</Link>
                     </Banner>
                 </StyledHero>
                 <section className='single-furniture'>
@@ -57,11 +57,6 @@ export default class SingleFurniture extends Component {
                             <h6>price: ${price}</h6>
                             <h6>Height: {heigth} </h6>
                             <h6>Width: {width} </h6>
-                            <h6>
-                                max capacity: {
-                                    capacity > 1 ? `${capacity} people` : `${capacity} person`
-                                }
-                            </h6>
                             <h6>
                                 {mirror ? "contains mirror" : "not contains mirror"}
                             </h6>

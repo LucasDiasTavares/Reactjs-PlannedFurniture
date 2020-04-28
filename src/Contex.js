@@ -13,7 +13,6 @@ export default class FurnitureProvider extends Component {
         loading: true,
         //filters
         type: 'all',
-        drawer: 1,
         price: 0,
         minPrice: 0,
         maxPrice: 0,
@@ -30,6 +29,7 @@ export default class FurnitureProvider extends Component {
             furniture => furniture.featured === true);
 
         let maxPrice = Math.max(...furnitures.map(item => item.price));
+        let minPrice = Math.min(...furnitures.map(item => item.price));
         let maxHeight = Math.max(...furnitures.map(item => item.heigth));
         let maxWidth = Math.max(...furnitures.map(item => item.width));
 
@@ -39,6 +39,7 @@ export default class FurnitureProvider extends Component {
             featuredFurnitures,
             loading: false,
             price: maxPrice,
+            minPrice: minPrice,
             maxPrice,
             maxHeight,
             maxWidth
@@ -74,7 +75,6 @@ export default class FurnitureProvider extends Component {
         let {
             furnitures,
             type,
-            drawer,
             price,
             minHeight,
             maxHeight,
@@ -84,17 +84,12 @@ export default class FurnitureProvider extends Component {
         } = this.state
 
         let tempFurnitures = [...furnitures];
-        drawer = parseInt(drawer)
         if (type !== 'all') {
             tempFurnitures = tempFurnitures.filter(furniture => furniture.type === type)
         }
         //filter by mirror
         if (mirror) {
             tempFurnitures = tempFurnitures.filter(furniture => furniture.mirror === true);
-        }
-        //filter by drawer
-        if (drawer !== 0) {
-            tempFurnitures = tempFurnitures.filter(furniture => furniture.drawer >= drawer)
         }
         //filter by price
         price = parseInt(price)

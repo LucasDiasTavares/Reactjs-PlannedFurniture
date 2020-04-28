@@ -15,7 +15,6 @@ export default function FurnitureFilter({ furnitures }) {
     const {
         handleChange,
         type,
-        drawer,
         price,
         minPrice,
         maxPrice,
@@ -27,11 +26,10 @@ export default function FurnitureFilter({ furnitures }) {
 
     let types = uniqueValues(furnitures, 'type');
     types = ['all', ...types];
-    let drawers = uniqueValues(furnitures, 'drawer');
 
     return (
         <section className="filter-container">
-            <Title title="Search Furniture" />
+            <Title title="Search Wardrobe" />
             <form className="filter-form">
                 <div className="form-group">
                     <label htmlFor="type">Furniture Type</label>
@@ -41,19 +39,6 @@ export default function FurnitureFilter({ furnitures }) {
                         className="form-control"
                         onChange={handleChange}>
                         {types = types.map((item, index) => {
-                            return <option value={item} key={index}>{item}</option>
-                        })}
-                    </select>
-                </div>
-
-                <div className="form-group">
-                    <label htmlFor="drawer">Drawers</label>
-                    <select name="drawer"
-                        id="drawer"
-                        value={drawer}
-                        className="form-control"
-                        onChange={handleChange}>
-                        {drawers = drawers.map((item, index) => {
                             return <option value={item} key={index}>{item}</option>
                         })}
                     </select>

@@ -9,7 +9,7 @@ export const PlannedFurniture = () => {
     return (
         <>
             <HeroSection hero='furnitureHero'>
-                <Banner title='uor planned furniture'>
+                <Banner title='uor planned wardrobes'>
                     <Link to='/' className='btn-primary'>
                         back to home
                     </Link>
