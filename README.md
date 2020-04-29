@@ -1,7 +1,7 @@
 # Planned Furniture
 Este é um pequeno projeto, onde consiste básicamente uma homepage e uma página secundaria onde o usuario pode utilizar alguns filtros, para ver exatamente oque ele quer, se existir o item.
 
-- Veja online no seu navegador [Lucas Tavares Planned Furniture]()
+- Veja online no seu navegador [Lucas Tavares Planned Furniture](https://lucastavares-planned-furniture.netlify.app/)
 - Caso queira testar na sua máquina uma versão de testes utilize o commit (d411fa5ade7b2013409053aa2e6f0051c0bd241a) importante ter uma imagem com o nome de defaultBcg para ser a default e uma com o nome de logo.svg dentro da pasta /images/ todas as outras imagens devem ser adicionadas manualmente para rodar localmente sem a utilização do back-end pela contentful.
 
 
